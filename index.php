@@ -28,14 +28,14 @@
     print_r($pizzes); */
     //header("Location: ./indexAdmin.php");
     
-    if(isset($_GET['submit'])){
-        $email = $_GET['email'];
-        $pwd = $_GET['pwd'];
+    if(isset($_POST['submit'])){
+        $email = $_POST['email'];
+        $pwd = $_POST['pwd'];
         include("./bd/bd_client_select.php");
 
-        if ($email == "$r[0]['email']" && $pwd == "$r[0]['pwd']" && $r[0]['tipo_usuario'] == 1) {
+        if ($email == "echo $r[0]['email']" && $pwd == "echo $r[0]['pwd']" && $r[0]['tipo_usuario'] == 1) {
             header("Location: ./indexAdmin.php");
-        } else if ($email == "$r[0]['email']" && $pwd == "$r[0]['pwd']" && $r[0]['tipo_usuario'] == 2) {
+        } else if ($email == "echo $r[0]['email']" && $pwd == "echo $r[0]['pwd']" && $r[0]['tipo_usuario'] == 2) {
             header("Location: ./indexUser.php");
         } else if ($select == "" && $pwd == "") {
             header("Location: ./indexAdmin.php");
@@ -51,7 +51,7 @@
 
 <section class="container grey-text">
     <h4 class="center"><span style="color: black;">Iniciar sessió</span></h4>
-    <form action="./index.php" method="GET" class="white" style="border-radius: 30px;">
+    <form action="./index.php" method="POST" class="white" style="border-radius: 30px;">
         <div class="input-field col s6">
             <input id="email" type="email" name="email" class="validate">
             <label for="email" class="black-text">Email</label>

@@ -95,9 +95,9 @@
 <body background="https://fondosmil.comfondo/14768.jpg" style="background-repeat: no-repeat; background-size: cover;" class="teal accent-4 darken-0 lighten-0">
     <nav class="grey z-deph-0">
         <div class="container">
-            <a href="../" class="brand-logo brand-text"><span style="color: white;">DWES Hoteles</span></a>
+            <a href="/student64/dwes" class="brand-logo brand-text"><span style="color: white;">DWES Hoteles</span></a>
             <ul class="right hide-onsmall-down" id="nav-mobile">
-                <li><a href="../" class="waves-effect waves-light btn">Inici</a></li>
+                <li><a href="/student64/dwes" class="waves-effect waves-light btn">Inici</a></li>
             </ul>
         </div>
     </nav>
