@@ -3,7 +3,6 @@
     if(isset($_POST['submit'])){
        if(isset($_POST['id'])) { $id = $_POST['id']; }
        if(isset($_POST['email'])) { $email = $_POST['email']; }
-       echo "email: ".$email;
     }
     
     if(basename(getcwd()) == "dwes") { include("./config/db_connexio.php"); }

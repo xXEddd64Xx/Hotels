@@ -1,5 +1,5 @@
 <?php
-    
+
     /* // Connexió a la base de dades
     $connexio = mysqli_connect('localhost', 'edu', '1234', 'dwes_pizza');
 

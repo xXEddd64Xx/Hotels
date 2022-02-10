@@ -1,3 +1,4 @@
+<?php echo session_status(); if(isset($_SESSION['id'])) { echo $_SESSION['id']; } if(session_status() != 2) { session_start(); } ?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -98,6 +99,8 @@
             <a href="/student64/dwes" class="brand-logo brand-text"><span style="color: white;">DWES Hoteles</span></a>
             <ul class="right hide-onsmall-down" id="nav-mobile">
                 <li><a href="/student64/dwes" class="waves-effect waves-light btn">Inici</a></li>
+                <li <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] != 0) { echo "hidden"; } } ?>><a href="/student64/dwes/index.php" class="waves-effect waves-light btn">Iniciar sessio</a></li>
+                <li <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] == 0) { echo "hidden"; } } ?>><a href="/student64/dwes/index.php" class="waves-effect waves-light btn">Tancar sessio</a></li>
             </ul>
         </div>
     </nav>

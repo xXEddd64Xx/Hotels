@@ -1,45 +1,25 @@
 <?php
-    
-    /* // Connexió a la base de dades
-    $connexio = mysqli_connect('localhost', 'edu', '1234', 'dwes_pizza');
-
-    // Comprovació de la connexió
-    if(!$connexio) {
-        echo 'Error de la connexió: ' . mysqli_connect_error();
-    } else {
-        echo 'Connexío realitzada correctament';
+    session_start();
+    $_SESSION['id'] = 0;
+    if(isset($_SESSION['id'])) {
+        if ($_SESSION['id'] == 1) { header("Location: ./indexAdmin.php"); }
+        else if ($_SESSION['id'] == 2) { header("Location: ./indexUser.php"); }
     }
-
-    // Escriure la consulta
-    $sql = 'SELECT nom, ingredients, id FROM pizzes';
-
-    //LLançar la consulta
-    $resultat = mysqli_query($connexio, $sql);
-
-    // Obtenir els resultats
-    $pizzes = mysqli_fetch_all($resultat, MYSQLI_ASSOC);
-
-    // Alliberar memòria
-    mysqli_free_result($resultat);
-
-    // Cal tancar la connexió
-    mysqli_close($connexio);
-
-    print_r($pizzes); */
-    //header("Location: ./indexAdmin.php");
-    
     if(isset($_POST['submit'])){
         $email = $_POST['email'];
         $pwd = $_POST['pwd'];
         include("./bd/bd_client_select.php");
-
-        if ($email == "echo $r[0]['email']" && $pwd == "echo $r[0]['pwd']" && $r[0]['tipo_usuario'] == 1) {
-            header("Location: ./indexAdmin.php");
-        } else if ($email == "echo $r[0]['email']" && $pwd == "echo $r[0]['pwd']" && $r[0]['tipo_usuario'] == 2) {
+        if ($email == $r[0]['email'] && $pwd == $r[0]['pwd'] && $r[0]['tipo_usuario'] == 1) {
+            $_SESSION['id'] = 1;
+            header("Location: ./puente.php");
+        } else if ($email == $r[0]['email'] && $pwd == $r[0]['pwd'] && $r[0]['tipo_usuario'] == 2) {
+            $_SESSION['id'] = 2;
             header("Location: ./indexUser.php");
-        } else if ($select == "" && $pwd == "") {
+        } else if ($email == "" && $pwd == "") {
+            $_SESSION['id'] = 0;
             header("Location: ./indexAdmin.php");
         } 
+        
     }
 
 ?>
