@@ -1,4 +1,4 @@
-<?php echo session_status(); if(isset($_SESSION['id'])) { echo $_SESSION['id']; } if(session_status() != 2) { session_start(); } ?>
+<?php echo "Status: ".session_status(); if(session_status() != 2) { session_start(); } echo " - ID Sessio: ".$_SESSION['id']; ?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DWES HOTELES</title>
     <!-- Compiled and minified CSS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
@@ -99,8 +100,8 @@
             <a href="/student64/dwes" class="brand-logo brand-text"><span style="color: white;">DWES Hoteles</span></a>
             <ul class="right hide-onsmall-down" id="nav-mobile">
                 <li><a href="/student64/dwes" class="waves-effect waves-light btn">Inici</a></li>
-                <li <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] != 0) { echo "hidden"; } } ?>><a href="/student64/dwes/index.php" class="waves-effect waves-light btn">Iniciar sessio</a></li>
-                <li <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] == 0) { echo "hidden"; } } ?>><a href="/student64/dwes/index.php" class="waves-effect waves-light btn">Tancar sessio</a></li>
+                <li <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] != 0) { echo "hidden"; } } ?>><a href="/student64/dwes/iniciSessio.php" class="waves-effect waves-light btn">Iniciar sessio</a></li>
+                <li <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] == 0) { echo "hidden"; } } ?>><a href="/student64/dwes/iniciSessio.php" onclick="<?php if(isset($_SESSION['id'])) { $_SESSION['id'] = 0; } ?>" class="waves-effect waves-light btn">Tancar sessio</a></li>
             </ul>
         </div>
     </nav>
