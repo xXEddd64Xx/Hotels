@@ -1,4 +1,5 @@
 <?php
+    /* include('../templates/header.php'); */
     $id = "";
     if(isset($_POST['submit'])){
        if(isset($_POST['id'])) { $id = $_POST['id']; }

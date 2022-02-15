@@ -1,39 +1,4 @@
-<?php
-    
-    /* // Connexió a la base de dades
-    $connexio = mysqli_connect('localhost', 'edu', '1234', 'dwes_pizza');
-
-    // Comprovació de la connexió
-    if(!$connexio) {
-        echo 'Error de la connexió: ' . mysqli_connect_error();
-    } else {
-        echo 'Connexío realitzada correctament';
-    }
-
-    // Escriure la consulta
-    $sql = 'SELECT nom, ingredients, id FROM pizzes';
-
-    //LLançar la consulta
-    $resultat = mysqli_query($connexio, $sql);
-
-    // Obtenir els resultats
-    $pizzes = mysqli_fetch_all($resultat, MYSQLI_ASSOC);
-
-    // Alliberar memòria
-    mysqli_free_result($resultat);
-
-    // Cal tancar la connexió
-    mysqli_close($connexio);
-
-    print_r($pizzes); */
-
-?>
-
-<!DOCTYPE html>
-<html lang="es">
-
-<?php include('templates/header.php'); ?>
-
+<?php session_start(); include('./templates/header.php'); ?>
 <section class="container grey-text">
 
     <h3 class="center"><span style="color: black;">Index</span></h3>

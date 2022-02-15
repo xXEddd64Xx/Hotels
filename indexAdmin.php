@@ -1,12 +1,4 @@
-<?php
-    session_start();
-
-?>
-
-<!DOCTYPE html>
-<html lang="es">
-
-<?php include('templates/header.php'); ?>
+<?php session_start(); include('./templates/header.php'); ?>
 
 <section class="container grey-text">
 

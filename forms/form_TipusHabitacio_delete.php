@@ -1,5 +1,5 @@
 <?php
-    include("../templates/header.php");
+    include('../templates/header.php');
     /*if(isset($_GET['submit'])){
         $id = $_GET['id'];
         include("../bd/bd_TipusHabitacio_delete.php");

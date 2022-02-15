@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    include('../templates/header.php');
 
     $errors = array('tipo' => '', 'numero' => '', 'numerotxt' => '', 'cerrada' => '', 'descripcion' => '', 'observaciones' => '', 'foto' => '');
     if(isset($_POST['submit'])){

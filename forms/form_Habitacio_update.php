@@ -1,6 +1,6 @@
 <?php
     echo "EN CONSTRUCCION, NO FUNCIONA...";
-    include("../templates/header.php");
+    include('../templates/header.php');
     include("../bd/bd_TipusHabitacio_select.php");
     $id = "";
     if(isset($_GET['submit'])){

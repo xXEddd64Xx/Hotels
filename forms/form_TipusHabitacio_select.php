@@ -1,5 +1,5 @@
 <?php
-    include("../templates/header.php");
+    include('../templates/header.php');
     include("../bd/bd_TipusHabitacio_select.php");
 ?>
 

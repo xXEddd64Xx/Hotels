@@ -1,4 +1,5 @@
 <?php
+    include('../templates/header.php');
     if (isset($_POST['submit'])) {
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];

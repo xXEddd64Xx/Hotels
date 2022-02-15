@@ -1,4 +1,6 @@
-<?php echo "Status: ".session_status(); if(session_status() != 2) { session_start(); } echo " - ID Sessio: ".$_SESSION['id']; ?>
+<?php /* session_start(); */ echo "Estat: ".session_status(). " ID: ".$_SESSION["id"]  ?>
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -99,9 +101,14 @@
         <div class="container">
             <a href="/student64/dwes" class="brand-logo brand-text"><span style="color: white;">DWES Hoteles</span></a>
             <ul class="right hide-onsmall-down" id="nav-mobile">
-                <li><a href="/student64/dwes" class="waves-effect waves-light btn">Inici</a></li>
-                <li <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] != 0) { echo "hidden"; } } ?>><a href="/student64/dwes/iniciSessio.php" class="waves-effect waves-light btn">Iniciar sessio</a></li>
-                <li <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] == 0) { echo "hidden"; } } ?>><a href="/student64/dwes/iniciSessio.php" onclick="<?php if(isset($_SESSION['id'])) { $_SESSION['id'] = 0; } ?>" class="waves-effect waves-light btn">Tancar sessio</a></li>
+                <li><a href="/student64/dwes/index.php" class="waves-effect waves-light btn">Inici</a></li>
+                <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] != 0) { ?>
+                    <li onclick="<?php $_SESSION["id"]=0 ?>" ><a href="/student64/dwes/iniciSessio.php" class="waves-effect waves-light btn">Tancar sessio</a></li>
+                <?php } else { ?>
+                    <li><a href="/student64/dwes/iniciSessio.php" class="waves-effect waves-light btn">Iniciar sessio</a></li>
+                <?php } } ?>
+                
+                
             </ul>
         </div>
     </nav>

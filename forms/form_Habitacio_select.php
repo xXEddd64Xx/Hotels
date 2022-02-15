@@ -1,5 +1,5 @@
 <?php
-    include("../templates/header.php");
+    include('../templates/header.php');
     include("../bd/bd_Habitacio_select.php");
     /* $arrayFotos = explode(",", $h[0]["fotos"]); */
     /* $arrayFotos = explode(",", substr($h[0]["fotos"], 0, strlen($h[0]["fotos"]) - 1)); */

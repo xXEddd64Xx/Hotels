@@ -1,5 +1,5 @@
 <?php
-
+    include('../templates/header.php');
     if(isset($_GET['submit'])){
         $id = $_GET['id'];
         $nom = $_GET['nombre'];

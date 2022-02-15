@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<?php include("./templates/header.php"); ?>
+<?php session_start(); include("./templates/header.php"); ?>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>

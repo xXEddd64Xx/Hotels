@@ -1,5 +1,8 @@
 <?php
     session_start();
+    include('./templates/header.php');
+    $destino = '';
+    
     
     /* if(isset($_SESSION['id'])) {
         if ($_SESSION['id'] == 1) { header("Location: ./indexAdmin.php"); }
@@ -12,26 +15,29 @@
         include("./bd/bd_client_select.php");
         if ($email == $r[0]['email'] && $pwd == $r[0]['pwd'] && $r[0]['tipo_usuario'] == 1) {
             $_SESSION['id'] = 1;
-            header("Location: ./puente.php");
-            echo "Admin";
+            /* echo $_SESSION['id']; */
+            /* header("Location: ./indexAdmin.php"); */
+            $destino = "Location: ./indexAdmin.php";
+            
+            /* echo "Admin"; */
         } else if ($email == $r[0]['email'] && $pwd == $r[0]['pwd'] && $r[0]['tipo_usuario'] == 2) {
             $_SESSION['id'] = 2;
-            header("Location: ./indexUser.php");
-            echo "User";
+            $destino = "Location: ./indexUser.php";
+            /* echo $_SESSION['id']; */
+            /* header("Location: ./indexUser.php"); */
+            /* echo "User"; */
         } else if ($email == "" && $pwd == "") {
-            /* $_SESSION['id'] = 0; */
-            /* header("Location: ./indexAdmin.php"); */
-            echo "Ano";
-        } 
+            $_SESSION['id'] = 0;
+            $destino = "Location: ./indexUser.php";
+            /* header("Location: ./indexUser.php"); */
+            /* echo "Ano"; */
+        }
+        header($destino);
         
     }
-
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
 
-<?php include('templates/header.php'); ?>
 
 <section class="container grey-text">
     <h4 class="center"><span style="color: black;">Iniciar sessió</span></h4>

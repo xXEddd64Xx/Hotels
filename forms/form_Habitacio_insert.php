@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-
 <?php 
     include('../templates/header.php');
     include('../bd/bd_TipusHabitacio_select.php');
