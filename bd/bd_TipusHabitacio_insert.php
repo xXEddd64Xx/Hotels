@@ -1,4 +1,5 @@
 <?php
+session_start();
     include('../templates/header.php');
     $errors = array('nombre' => '', 'precio' => '', 'descripcion' => '', 'capacidad' => '', 'codigo' => '', 'foto' => '');
     if(isset($_GET['submit'])){
@@ -66,6 +67,7 @@
 
     if (array_filter($errors)) {
         //$errorsSerialitzat = serialize($errors);
+        $_SESSION['id'] = 5;
         $_SESSION['errors'] = $errors;
         header("Location: ../forms/form_TipusHabitacio_insert.php");
     }

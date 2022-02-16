@@ -1,9 +1,11 @@
-<?php 
+<?php
+session_start();
     include('../templates/header.php');
     $errors = array('nombre' => '', 'precio' => '', 'descripcion' => '', 'capacidad' => '', 'codigo' => '', 'foto' => '');
-    session_start();
+    
     if(isset($_SESSION['errors'])) { $errors = $_SESSION['errors']; }
     session_destroy();
+
     /* if(isset($_GET['errors'])) {
         $errors2 = stripslashes($_GET['errors']);
         $errors = unserialize($errors2);

@@ -15,9 +15,10 @@
         include("./bd/bd_client_select.php");
         if ($email == $r[0]['email'] && $pwd == $r[0]['pwd'] && $r[0]['tipo_usuario'] == 1) {
             $_SESSION['id'] = 1;
+            $destino = "Location: ./indexAdmin.php";
             /* echo $_SESSION['id']; */
             /* header("Location: ./indexAdmin.php"); */
-            $destino = "Location: ./indexAdmin.php";
+            
             
             /* echo "Admin"; */
         } else if ($email == $r[0]['email'] && $pwd == $r[0]['pwd'] && $r[0]['tipo_usuario'] == 2) {

@@ -1,4 +1,8 @@
-<?php session_start(); include('./templates/header.php'); ?>
+<?php 
+session_start();
+echo "ID: ".$_SESSION['id'];
+include('./templates/header.php');
+?>
 
 <section class="container grey-text">
 

@@ -103,12 +103,10 @@
             <ul class="right hide-onsmall-down" id="nav-mobile">
                 <li><a href="/student64/dwes/index.php" class="waves-effect waves-light btn">Inici</a></li>
                 <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] != 0) { ?>
-                    <li onclick="<?php $_SESSION["id"]=0 ?>" ><a href="/student64/dwes/iniciSessio.php" class="waves-effect waves-light btn">Tancar sessio</a></li>
+                    <li> <form></form> <a href="/student64/dwes/iniciSessio.php" class="waves-effect waves-light btn">Tancar sessio</a></li>
                 <?php } else { ?>
                     <li><a href="/student64/dwes/iniciSessio.php" class="waves-effect waves-light btn">Iniciar sessio</a></li>
                 <?php } } ?>
-                
-                
             </ul>
         </div>
     </nav>
