@@ -1,10 +1,10 @@
 <?php 
+    session_start();
     include('../templates/header.php');
     include('../bd/bd_TipusHabitacio_select.php');
     $errors = array('tipo' => '', 'numero' => '', 'numerotxt' => '', 'cerrada' => '', 'descripcion' => '', 'observaciones' => '', 'foto' => '');
-    session_start();
     if(isset($_SESSION['errors'])) { $errors = $_SESSION['errors']; }
-    session_destroy();
+    
     /* if(isset($_GET['errors'])) {
         $errors2 = stripslashes($_GET['errors']);
         $errors = unserialize($errors2);

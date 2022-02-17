@@ -1,6 +1,6 @@
 <?php 
 session_start();
-echo "ID: ".$_SESSION['id'];
+
 include('./templates/header.php');
 ?>
 

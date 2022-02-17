@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/x-icon" href="/student64/dwes/RRSS/hotel.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>DWES HOTELES</title>
     <!-- Compiled and minified CSS -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script> -->
@@ -53,18 +54,19 @@
 
         }
     </style>
+    <!-- JQUERYS -->
+    <script>
+        (function($){
+            $(function(){
+                // Plugin initialization
+                $('select').not('.disabled').formSelect();
+            }); 
+        })(jQuery); // end of jQuery name space
+    </script>
     <script>
         $(document).ready(function(){
             $('.tabs').tabs();
         });
-    </script>
-    <script>
-        (function($){
-        $(function(){
-            // Plugin initialization
-            $('select').not('.disabled').formSelect();
-        }); 
-        })(jQuery); // end of jQuery name space
     </script>
     <script>
         $(document).ready(function(){
@@ -85,6 +87,7 @@
     <script>
         $(document).ready(function(){
             $('.datepicker').datepicker({
+                firstDay: 1,
                 format: 'yyyy-mm-dd'
             });
         });
@@ -96,14 +99,14 @@
     </script>
 
 </head>
-<body background="https://fondosmil.comfondo/14768.jpg" style="background-repeat: no-repeat; background-size: cover;" class="teal accent-4 darken-0 lighten-0">
+<body background="https://fondosmil.com/fondo14768.jpg" style="background-repeat: no-repeat; background-size: cover;" class="teal accent-4 darken-0 lighten-0">
     <nav class="grey z-deph-0">
         <div class="container">
             <a href="/student64/dwes" class="brand-logo brand-text"><span style="color: white;">DWES Hoteles</span></a>
             <ul class="right hide-onsmall-down" id="nav-mobile">
                 <li><a href="/student64/dwes/index.php" class="waves-effect waves-light btn">Inici</a></li>
                 <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] != 0) { ?>
-                    <li> <form></form> <a href="/student64/dwes/iniciSessio.php" class="waves-effect waves-light btn">Tancar sessio</a></li>
+                    <li><a href="/student64/dwes/iniciSessio.php?submit=submit" class="waves-effect waves-light btn">Tancar sessio</a></li>
                 <?php } else { ?>
                     <li><a href="/student64/dwes/iniciSessio.php" class="waves-effect waves-light btn">Iniciar sessio</a></li>
                 <?php } } ?>

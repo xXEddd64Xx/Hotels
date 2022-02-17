@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include('../templates/header.php');
     /*if(isset($_GET['submit'])){
         $id = $_GET['id'];

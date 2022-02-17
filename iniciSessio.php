@@ -4,37 +4,26 @@
     $destino = '';
     
     
-    /* if(isset($_SESSION['id'])) {
+    if(isset($_SESSION['id'])) {
         if ($_SESSION['id'] == 1) { header("Location: ./indexAdmin.php"); }
         else if ($_SESSION['id'] == 2) { header("Location: ./indexUser.php"); }
-    } */
+    }
+    if(isset($_GET['submit'])){
+        $_SESSION['id'] = 0;
+    }
 
     if(isset($_POST['submit'])){
-        $email = $_POST['email'];
-        $pwd = $_POST['pwd'];
+        $_SESSION['id'] = 0;
         include("./bd/bd_client_select.php");
-        if ($email == $r[0]['email'] && $pwd == $r[0]['pwd'] && $r[0]['tipo_usuario'] == 1) {
+        if ($_POST['email'] == $r[0]['email'] && $_POST['pwd'] == $r[0]['pwd'] && $r[0]['tipo_usuario'] == 1) {
             $_SESSION['id'] = 1;
             $destino = "Location: ./indexAdmin.php";
-            /* echo $_SESSION['id']; */
-            /* header("Location: ./indexAdmin.php"); */
-            
-            
-            /* echo "Admin"; */
-        } else if ($email == $r[0]['email'] && $pwd == $r[0]['pwd'] && $r[0]['tipo_usuario'] == 2) {
+        } else if ($_POST['email'] == $r[0]['email'] && $_POST['pwd'] == $r[0]['pwd'] && $r[0]['tipo_usuario'] == 2) {
             $_SESSION['id'] = 2;
             $destino = "Location: ./indexUser.php";
-            /* echo $_SESSION['id']; */
-            /* header("Location: ./indexUser.php"); */
-            /* echo "User"; */
-        } else if ($email == "" && $pwd == "") {
-            $_SESSION['id'] = 0;
-            $destino = "Location: ./indexUser.php";
-            /* header("Location: ./indexUser.php"); */
-            /* echo "Ano"; */
         }
+
         header($destino);
-        
     }
 ?>
 

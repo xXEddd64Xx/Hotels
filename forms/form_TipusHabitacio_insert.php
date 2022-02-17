@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
     include('../templates/header.php');
     $errors = array('nombre' => '', 'precio' => '', 'descripcion' => '', 'capacidad' => '', 'codigo' => '', 'foto' => '');
     

@@ -1,6 +1,5 @@
 <?php
-session_start();
-    include('../templates/header.php');
+    
     $errors = array('nombre' => '', 'precio' => '', 'descripcion' => '', 'capacidad' => '', 'codigo' => '', 'foto' => '');
     if(isset($_GET['submit'])){
         $nom = $_GET['nombre'];

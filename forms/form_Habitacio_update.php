@@ -1,4 +1,5 @@
 <?php
+    session_start();
     echo "EN CONSTRUCCION, NO FUNCIONA...";
     include('../templates/header.php');
     include("../bd/bd_TipusHabitacio_select.php");

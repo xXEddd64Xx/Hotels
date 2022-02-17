@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include('../templates/header.php');
     include("../bd/bd_Habitacio_select.php");
     /* $arrayFotos = explode(",", $h[0]["fotos"]); */

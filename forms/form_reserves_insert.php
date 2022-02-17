@@ -1,10 +1,11 @@
 <?php 
+    session_start();
     include('../templates/header.php');
     include('../bd/bd_Pensio_select.php');
     include('../bd/bd_Habitacio_select.php');
     include('../bd/bd_tipusHabitacio_select.php');
     $errors = array('tipo' => '', 'numero' => '', 'numerotxt' => '', 'cerrada' => '', 'descripcion' => '', 'observaciones' => '', 'foto' => '');
-    session_start();
+    
     if(isset($_SESSION['errors'])) { $errors = $_SESSION['errors']; }
     session_destroy();
     /* if(isset($_GET['errors'])) {

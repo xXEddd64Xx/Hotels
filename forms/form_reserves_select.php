@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include('../templates/header.php');
     include("../bd/bd_reserves_select.php");
 ?>
