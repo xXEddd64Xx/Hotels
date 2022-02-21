@@ -1,16 +1,14 @@
 <?php
     session_start();
+    if(isset($_GET['submit'])) { $_SESSION['id'] = 0; }
     include('./templates/header.php');
     $destino = '';
     
     
-    if(isset($_SESSION['id'])) {
+    /* if(isset($_SESSION['id'])) {
         if ($_SESSION['id'] == 1) { header("Location: ./indexAdmin.php"); }
         else if ($_SESSION['id'] == 2) { header("Location: ./indexUser.php"); }
-    }
-    if(isset($_GET['submit'])){
-        $_SESSION['id'] = 0;
-    }
+    } */
 
     if(isset($_POST['submit'])){
         $_SESSION['id'] = 0;

@@ -1,5 +1,4 @@
 <?php
-    
     if (isset($_POST['submit'])) {
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
@@ -16,9 +15,8 @@
     echo "nombre: ".$nombre." apellido: ".$apellido." tlf: ".$tlf." dni: ".$dni." email: ".$email." direccion: ".$direccion." pwd: ".$pwd." repwd: ".$repwd;
 
     include('../config/db_connexio.php');
-    $sql = 
-    "INSERT INTO 64_clients (nombre, apellido, tlf, dni, email, direccion, pwd)
-                    VALUES ('$nombre', '$apellido', $tlf, '$dni', '$email', '$direccion', '$pwd');";
+    $sql = "INSERT INTO 64_clients (nombre, apellido, tlf, dni, email, direccion, pwd)
+            VALUES ('$nombre', '$apellido', $tlf, '$dni', '$email', '$direccion', '$pwd');";
 
     //LLançar la consulta
     if(mysqli_query($connexio, $sql)) {

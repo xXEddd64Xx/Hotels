@@ -1,4 +1,7 @@
-<?php include('../templates/header.php'); ?>
+<?php
+    session_start();
+    include('../templates/header.php');
+?>
 
 <section class="container grey-text">
     <h4 class="center"><span style="color: white;">Crear una cuenta</span></h4>
