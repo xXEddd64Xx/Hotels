@@ -4,7 +4,7 @@
       <br><br>
       <h1 class="header center white-text">DWES Hoteles</h1>
       <div class="row center">
-        <h5 class="header col s12 light"><b>A modern responsive webpage where to book the best hotel rooms on the world</b></h5>
+        <h5 class="header col s12 light"><b>A modern responsive webpage where to book the best hotel rooms in the world</b></h5>
       </div>
       <div class="row center">
         <a href="./forms/form_client_insert.php" id="download-button" class="btn-large waves-effect waves-light orange">Create account</a>

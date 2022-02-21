@@ -1,4 +1,4 @@
-<?php /* session_start(); */ echo "Estat: ".session_status(). " ID: ".$_SESSION["id"]  ?>
+<?php /* session_start(); */ echo "Estat: ".session_status(). " ID: ".$_SESSION["id"]." Bienvenido/a".session_name();  ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

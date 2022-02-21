@@ -21,5 +21,5 @@
     $resultat = mysqli_query($connexio, $sql);
 
     // Obtenir els resultats
-    $r = mysqli_fetch_all($resultat, MYSQLI_ASSOC);
+    $c = mysqli_fetch_all($resultat, MYSQLI_ASSOC);
 ?>
