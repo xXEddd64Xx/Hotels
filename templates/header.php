@@ -50,9 +50,6 @@
         main {
             flex: 1 0 auto;
         }
-        .prova {
-
-        }
     </style>
     <!-- JQUERYS -->
     <script>
@@ -99,7 +96,7 @@
     </script>
 
 </head>
-<body background="https://fondosmil.com/fondo14768.jpg" style="background-repeat: no-repeat; background-size: cover;" class="teal accent-4 darken-0 lighten-0">
+<body style="background-repeat: no-repeat; background-size: cover;" class="teal accent-4 darken-0 lighten-0">
     <nav class="grey z-deph-0">
         <div class="container">
             <a href="/student64/dwes" class="brand-logo brand-text"><span style="color: white;">DWES Hoteles</span></a>
