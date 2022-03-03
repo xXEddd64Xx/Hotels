@@ -12,11 +12,11 @@ include('./templates/header.php');
         </br>
         <div>
             <div class="center" style="opacity: 100%;">
-                <a href="./forms/form_TipusHabitacio_select.php" class="waves-effect waves-light btn" style="width: 40%;"><i class="material-icons right">open_in_new</i>visualizar</a>
+                <a href="./forms/form_TipusHabitacio_select.php" class="waves-effect waves-light btn" style="width: 40%;"><span style="margin-right: 15%;">visualizar</span><i class="fa-regular fa-eye"></i></a>
             </div>
             </br>
             <div class="center">
-                <a href="./forms/form_TipusHabitacio_insert.php" class="waves-effect waves-light btn" style="width: 40%;"><i class="material-icons right">add_circle</i>añadir</a>
+                <a href="./forms/form_TipusHabitacio_insert.php" class="waves-effect waves-light btn" style="width: 40%;"><span style="margin-right: 15%;">añadir</span><i class="fa-solid fa-circle-plus"></i></a>
             </div>
         </div>
         </br>
@@ -35,11 +35,11 @@ include('./templates/header.php');
         </br>
         <div>
             <div class="center" style="opacity: 100%;">
-                <a href="./forms/form_Habitacio_select.php" class="waves-effect waves-light btn" style="width: 40%;"><i class="material-icons right">open_in_new</i>visualizar</a>
+                <a href="./forms/form_Habitacio_select.php" class="waves-effect waves-light btn" style="width: 40%;"><span style="margin-right: 15%;">visualizar</span><i class="fa-regular fa-eye"></i></a>
             </div>
             </br>
             <div class="center">
-                <a href="./forms/form_Habitacio_insert.php" class="waves-effect waves-light btn" style="width: 40%;"><i class="material-icons right">add_circle</i>añadir</a>
+                <a href="./forms/form_Habitacio_insert.php" class="waves-effect waves-light btn" style="width: 40%;"><span style="margin-right: 15%;">añadir</span><i class="fa-solid fa-circle-plus"></i></a>
             </div>
         </div>
         </br>
@@ -58,11 +58,11 @@ include('./templates/header.php');
         </br>
         <div>
             <div class="center" style="opacity: 100%;">
-                <a href="./forms/form_reserves_select.php" class="waves-effect waves-light btn" style="width: 40%;"><i class="material-icons right">open_in_new</i>visualizar</a>
+                <a href="./forms/form_reserves_select.php" class="waves-effect waves-light btn" style="width: 40%;"><span style="margin-right: 15%;">visualizar</span><i class="fa-regular fa-eye"></i></a>
             </div>
             </br>
             <div class="center">
-                <a href="./forms/form_reserves_insert.php" class="waves-effect waves-light btn" style="width: 40%;"><i class="material-icons right">add_circle</i>añadir</a>
+                <a href="./forms/form_reserves_insert.php" class="waves-effect waves-light btn" style="width: 40%;"><span style="margin-right: 15%;">añadir</span><i class="fa-solid fa-circle-plus"></i></a>
             </div>
         </div>
         </br>
@@ -81,11 +81,11 @@ include('./templates/header.php');
         </br>
         <div>
             <div class="center" style="opacity: 100%;">
-                <a href="./forms/form_client_select.php" class="waves-effect waves-light btn" style="width: 40%;"><i class="material-icons right">open_in_new</i>visualizar</a>
+                <a href="./forms/form_client_select.php" class="waves-effect waves-light btn" style="width: 40%;"><span style="margin-right: 15%;">visualizar</span><i class="fa-regular fa-eye"></i></a>
             </div>
             </br>
             <div class="center">
-                <a href="./forms/form_client_insert.php" class="waves-effect waves-light btn" style="width: 40%;"><i class="material-icons right">add_circle</i>añadir</a>
+                <a href="./forms/form_client_insert.php" class="waves-effect waves-light btn" style="width: 40%;"><span style="margin-right: 15%;">añadir</span><i class="fa-solid fa-circle-plus"></i></a>
             </div>
         </div>
         </br>
@@ -96,6 +96,29 @@ include('./templates/header.php');
             </br>
             <div class="center">
                 <a href="./forms/form_Habitacio_delete.php" class="waves-effect waves-light btn" style="width: 40%;"><i class="material-icons right">cancel</i>eliminar</a>
+            </div>
+        </div> -->
+    </form>
+    <form class="z-depth-5" style="border-radius: 30px; opacity:90%;">
+        <label class="center"><h4><span style="color: black;">Reports</span></h4></label>
+        </br>
+        <div>
+            <div class="center" style="opacity: 100%;">
+                <a href="./reports/reserves_report.php" class="waves-effect waves-light btn" style="width: 40%;"><span style="margin-right: 15%;">Reserves</span><i class="fa-regular fa-file-lines"></i></a>
+            </div>
+            </br>
+            <div class="center">
+                <a href="./forms/form_TipusHabitacio_insert.php" class="waves-effect waves-light btn" style="width: 40%;">añadir</a>
+            </div>
+        </div>
+        </br>
+        <!-- <div>
+            <div class="center">
+                <a href="./forms/form_TipusHabitacio_update.php" class="waves-effect waves-light btn" style="width: 40%;"><i class="material-icons right">build</i>actualizar</a>
+            </div>
+            </br>
+            <div class="center">
+                <a href="./forms/form_TipusHabitacio_delete.php" class="waves-effect waves-light btn" style="width: 40%;"><i class="material-icons right">cancel</i>eliminar</a>
             </div>
         </div> -->
     </form>
