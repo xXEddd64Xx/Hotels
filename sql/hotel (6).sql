@@ -12,7 +12,7 @@ DROP TABLE IF EXISTS `64_habitacio`;
 DROP VIEW IF EXISTS `64_reserves_view`;
 
 --
--- Drops
+-- Create table
 --
 
 CREATE TABLE `64_clients` (
@@ -132,7 +132,7 @@ CREATE VIEW 64_reserves_view AS
                 clients.tlf AS 'Telefono',
                 clients.dni AS 'DNI',
                 clients.email AS 'Email',
-                tipusHabitacio.nombre AS 'Tipus d\'habitacio',
+                tipusHabitacio.nombre AS 'Tipus habitacio',
                 tipusHabitacio.id AS 'ID Tipus Habitacio',
                 habitacio.numero AS 'Número Habitación',
                 estat.nom AS 'Estado Reserva',
@@ -143,7 +143,7 @@ CREATE VIEW 64_reserves_view AS
                 INNER JOIN `64_habitacio` AS habitacio ON reserves.habitacion_id = habitacio.id
                 INNER JOIN `64_tipushabitacio` AS tipusHabitacio ON habitacio.tipo_habitacion = tipusHabitacio.id 
                 INNER JOIN `64_estat_reserva` AS estat ON reserves.estado_id = estat.id
-                INNER JOIN `64_pensio` AS pensio ON reserves.pension_id = pensio.id;";
+                INNER JOIN `64_pensio` AS pensio ON reserves.pension_id = pensio.id;
 
 --
 -- Claves primarias
