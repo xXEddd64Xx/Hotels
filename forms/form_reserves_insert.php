@@ -6,8 +6,11 @@
     include('../bd/bd_tipusHabitacio_select.php');
     $errors = array('tipo' => '', 'numero' => '', 'numerotxt' => '', 'cerrada' => '', 'descripcion' => '', 'observaciones' => '', 'foto' => '');
     
-    if(isset($_SESSION['errors'])) { $errors = $_SESSION['errors']; }
-    session_destroy();
+    if(isset($_SESSION['errors'])) {
+        $errors = $_SESSION['errors'];
+        session_unset($_SESSION['errors']);
+    }
+    
     /* if(isset($_GET['errors'])) {
         $errors2 = stripslashes($_GET['errors']);
         $errors = unserialize($errors2);

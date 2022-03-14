@@ -3,8 +3,10 @@
     include('../templates/header.php');
     $errors = array('nombre' => '', 'precio' => '', 'descripcion' => '', 'capacidad' => '', 'codigo' => '', 'foto' => '');
     
-    if(isset($_SESSION['errors'])) { $errors = $_SESSION['errors']; }
-    session_destroy();
+    if(isset($_SESSION['errors'])) { 
+        $errors = $_SESSION['errors'];
+        session_unset($_SESSION['errors']);
+    }
 
     /* if(isset($_GET['errors'])) {
         $errors2 = stripslashes($_GET['errors']);

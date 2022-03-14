@@ -14,7 +14,7 @@
                 <div class="card">
                     <div class="card-content">
                         <div id="<?php echo $cont; ?>">
-                            Tipo de habitacion:<pre class="white" style='display:inline; border:none; opacity:0%;'>&#09;&#09;</pre><?php echo $r[$i]['Tipus d\'habitacio'] ?><br>
+                            Tipo de habitacion:<pre class="white" style='display:inline; border:none; opacity:0%;'>&#09;&#09;</pre><?php echo $r[$i]['Tipus Habitacio'] ?><br>
                             Precio de la reserva:<pre class="white" style='display:inline; border:none; opacity:0%;'>&#09;</pre><?php echo $r[$i]['Precio reserva'] ?> €<br>
                             Número de habitación:<pre class="white" style='display:inline; border:none; opacity:0%;'>&#09;</pre><?php echo $r[$i]['Número Habitación'] ?><br>
                         </div>

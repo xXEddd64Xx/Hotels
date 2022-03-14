@@ -9,7 +9,7 @@
                 clients.tlf AS 'Telefono',
                 clients.dni AS 'DNI',
                 clients.email AS 'Email',
-                tipusHabitacio.nombre AS 'Tipus d\'habitacio',
+                tipusHabitacio.nombre AS 'Tipus Habitacio',
                 tipusHabitacio.id AS 'ID Tipus Habitacio',
                 habitacio.numero AS 'Número Habitación',
                 estat.nom AS 'Estado Reserva',
