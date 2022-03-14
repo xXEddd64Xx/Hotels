@@ -8,10 +8,6 @@
         session_unset($_SESSION['errors']);
     }
 
-    /* if(isset($_GET['errors'])) {
-        $errors2 = stripslashes($_GET['errors']);
-        $errors = unserialize($errors2);
-    } */
 
 ?>
 
