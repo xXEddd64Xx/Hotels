@@ -1,5 +1,10 @@
 <?php 
     session_start();
+    if(isset($_SESSION['id'])) { 
+        if($_SESSION['id'] == 0) { 
+            header('Location: ../iniciSessio.php');
+        }
+    }
     include('../templates/header.php');
     include('../bd/bd_Pensio_select.php');
     include('../bd/bd_Habitacio_select.php');

@@ -13,14 +13,10 @@
     if(isset($_POST['submit'])){
         $_SESSION['id'] = 0;
         include("./bd/bd_client_select.php");
-        if ($_POST['email'] == $c[0]['email'] && $_POST['pwd'] == $c[0]['pwd'] && $c[0]['tipo_usuario'] == 1) {
-            $_SESSION['id'] = 1;
-            $destino = "Location: ./indexAdmin.php";
-        } else if ($_POST['email'] == $c[0]['email'] && $_POST['pwd'] == $c[0]['pwd'] && $c[0]['tipo_usuario'] == 2) {
-            $_SESSION['id'] = 2;
-            $destino = "Location: ./indexUser.php";
+        if ($_POST['email'] == $c[0]['email'] && $_POST['pwd'] == $c[0]['pwd']) {
+            $_SESSION['id'] = $c[0]['tipo_usuario'];
+            $destino = "Location: ./index.php";
         }
-
         header($destino);
     }
 ?>

@@ -36,11 +36,6 @@
             margin: 20px auto;
             padding: 20px;
         }
-        /* footer{
-            position: initial;
-            bottom: 0%;
-            width: 100%;
-        } */
         body {
             display: flex;
             min-height: 100vh;
@@ -99,6 +94,11 @@
 <body style="background-repeat: no-repeat; background-size: cover;" class="teal accent-4 darken-0 lighten-0">
     <nav class="grey z-deph-0">
         <div class="container">
+            <ul class="right hide-onsmall-down" id="nav-mobile">
+            <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] == 1) { ?>
+                <li><a href="/student64/dwes/indexAdmin.php" class="waves-effect waves-light btn">Admin</a></li>
+            <?php } } ?>
+            </ul>
             <a href="/student64/dwes" class="brand-logo brand-text"><span style="color: white;">DWES Hoteles</span></a>
             <ul class="right hide-onsmall-down" id="nav-mobile">
                 <li><a href="/student64/dwes/index.php" class="waves-effect waves-light btn">Inici</a></li>
