@@ -89,24 +89,38 @@
             $('.timepicker').timepicker();
         });
     </script>
+    <script>
+        $(document).ready(function(){
+            $(".dropdown-trigger").dropdown();
+        });
+    </script>
 
 </head>
 <body style="background-repeat: no-repeat; background-size: cover;" class="teal accent-4 darken-0 lighten-0">
-    <nav class="grey z-deph-0">
-        <div class="container">
-            <ul class="right hide-onsmall-down" id="nav-mobile">
-            <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] == 1) { ?>
-                <li><a href="/student64/dwes/indexAdmin.php" class="waves-effect waves-light btn">Admin</a></li>
-            <?php } } ?>
-            </ul>
-            <a href="/student64/dwes" class="brand-logo brand-text"><span style="color: white;">DWES Hoteles</span></a>
-            <ul class="right hide-onsmall-down" id="nav-mobile">
-                <li><a href="/student64/dwes/index.php" class="waves-effect waves-light btn">Inici</a></li>
-                <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] != 0) { ?>
-                    <li><a href="/student64/dwes/iniciSessio.php?submit=submit" class="waves-effect waves-light btn">Tancar sessio</a></li>
-                <?php } else { ?>
-                    <li><a href="/student64/dwes/iniciSessio.php" class="waves-effect waves-light btn">Iniciar sessio</a></li>
-                <?php } } ?>
-            </ul>
-        </div>
-    </nav>
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="/student64/dwes/forms/form_client_select.php">Perfil</a></li>
+    <li class="divider"></li>
+    <li><a href="/student64/dwes/iniciSessio.php?submit=submit">Sortir</a></li>
+</ul>
+<nav class="grey z-deph-0">
+  <div class="container">
+    <a href="#!" class="brand-logo">DWES Hoteles</a>
+    <ul class="">
+        <li><a href="/student64/dwes/index.php" class="waves-effect waves-light btn">Inici</a></li>
+    </ul>
+    <ul class="">
+        <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] == 1) { ?>
+            <li><a href="/student64/dwes/indexAdmin.php" class="waves-effect waves-light btn">Admin</a></li>
+        <?php } } ?>
+    </ul>
+
+    <ul class="right">
+        <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] == 0) { ?>
+            <li><a href="/student64/dwes/iniciSessio.php" class="waves-effect waves-light btn">Iniciar sessio</a></li>
+        <?php } else {?>
+            <li><a class="dropdown-trigger" data-target="dropdown1">Compte<i class="material-icons right">arrow_drop_down</i></a></li>
+        <?php } }?>
+    </ul>
+  </div>
+</nav>
+    

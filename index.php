@@ -21,18 +21,10 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <div class="card blue-grey darken-1">
-              <div class="card-content white-text">
-              <h5 class="center">Tipus Habitacions</h5>
-                <!-- <span class="">Card Title</span> -->
-                <p>Aqui podràs gaudir de la gran diversitat d'habitacions que tenim per reservar.</p>
-              </div>
-              <div class="card-action">
-                <a href="./forms/form_TipusHabitacio_select.php">Visualitzar</a>
-                <a href="./forms/form_reserves_insert.php">Reservar ara</a>
-              </div>
-            </div>
-            <p class="center light"></p>
+            <h2 class="center black-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Habitacions</h5>
+
+            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
           </div>
         </div>
 
