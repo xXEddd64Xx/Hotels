@@ -15,6 +15,7 @@
         include("./bd/bd_client_select.php");
         if ($_POST['email'] == $c[0]['email'] && $_POST['pwd'] == $c[0]['pwd']) {
             $_SESSION['id'] = $c[0]['tipo_usuario'];
+            $_SESSION['cliente_id'] = $c[0]['cliente_id'];
             $destino = "Location: ./index.php";
         }
         header($destino);
