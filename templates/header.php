@@ -1,4 +1,4 @@
-<?php echo "Estat: ".session_status(). " ID: ".$_SESSION["id"] ?>
+<?php echo "Estat: " . session_status() . " ID: " . $_SESSION["id"] . " Client: " . $_SESSION["cliente_id"]; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

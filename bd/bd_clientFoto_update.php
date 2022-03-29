@@ -1,30 +1,28 @@
 <?php
-if(isset($_FILES['foto'])) {
-    // Control de extensions.
-    $extensions = array("jpeg", "jpg", "png", "gif");
-    
-    $intFitxers = count($_FILES['foto']['name']);
-
-    for ($i = 0; $i < $intFitxers; $i++) { 
+session_start();
+if(isset($_POST['submit'])) {
+    if(isset($_FILES['foto'])) {
         // Array per emmagatzemar els posibles errors.
-        $errorsF = array();
-        // Boleà extensions
-        $blnExtensio = false;
+        $errors = array();
 
+        // Control de extensions.
+        $extensions = array("jpeg", "jpg", "png");
+        $blnExtensio = false;
+        
         // Nom del fitxer.
-        $nom_fitxer = $_FILES['foto']['name'][$i];
+        $nom_fitxer = $_FILES['foto']['name'];
 
         // La mida en bytes del fitxer carregat.
-        $tamany_fitxer = $_FILES['foto']['size'][$i];
+        $tamany_fitxer = $_FILES['foto']['size'];
 
         // Fitxer carregat temporalment en el servidor.
-        $fitxer_temp = $_FILES['foto']['tmp_name'][$i];
+        $fitxer_temp = $_FILES['foto']['tmp_name'];
 
         // El tipus MIME del fitxer carregat.
-        $tipus_fitxer = $_FILES['foto']['type'][$i];
+        $tipus_fitxer = $_FILES['foto']['type'];
 
         // El codi d'error associat a aquesta pujada.
-        $error_fitxer = $_FILES['foto']['error'][$i];
+        $error_fitxer = $_FILES['foto']['error'];
 
         /* echo "Nom real del fitxer carregat: " . $nom_fitxer . "<br>" . "<br>";
         echo "Mida en bytes del fitxer carregat: " . $tamany_fitxer . "<br>" . "<br>";
@@ -34,7 +32,7 @@ if(isset($_FILES['foto'])) {
 
         // Comprovem el tamany del fitxer.
         if($tamany_fitxer > 2097152) {
-            $errorsF[] = 'El tamany del fitxer no és correcte.';
+            $errors[] = 'El tamany del fitxer no és correcte.';
         }
 
         // Comprovar l'extensió del fitxer.
@@ -45,20 +43,30 @@ if(isset($_FILES['foto'])) {
         }
 
         if(!$blnExtensio) {
-            $errorsF[] = 'l\'extensio no és correcte';
+            $errors[] = 'l\'extensio no és correcte';
         }
 
         // Comprovar els possibles errors.
         if(empty($errorsF)) {
             // Si tot està ok 
-            move_uploaded_file($fitxer_temp, '../images/habitacio/' . $nom_fitxer);
-            $foto .= $nom_fitxer . ",";
-            
-            /* $foto.str_replace() */
-            echo "<b>Fitxer enviat correctament</b>" . "<br><br>";
+            move_uploaded_file($fitxer_temp, '../images/perfils/' . $nom_fitxer);
+            /* $foto .= $nom_fitxer . ","; */
+            include('../config/db_connexio.php');
+            $cliID = $_SESSION['cliente_id'];
+            $sql = "UPDATE 64_clients
+                    SET foto = '$nom_fitxer'
+                    WHERE cliente_id = $cliID";
+
+            //LLançar la consulta
+            mysqli_query($connexio, $sql);
+                // La cosa ha anat be
+                // Redirecionem cap a index
+            header("Location: ../forms/form_client_select.php");
+                        
         } else {
             print_r($errors);
         }
+
     }
 }
 ?>

@@ -8,14 +8,14 @@
        if(isset($_POST['email'])) { $email = $_POST['email']; }
     }
     
-    if(basename(getcwd()) == "dwes") { include("./config/db_connexio.php"); echo "dins getcwd"; }
+    if(basename(getcwd()) == "dwes") { include("./config/db_connexio.php");}
     else { include("../config/db_connexio.php"); }
 
     if ($email != "") {
-        $sql = "SELECT * FROM `64_clients` WHERE email = '$email'"; echo "dins if sql";
-    } else if ($id != "") {
+        $sql = "SELECT * FROM `64_clients` WHERE email = '$email'";;
+    } /* else if ($id != "") {
         $sql = "SELECT * FROM `64_clients` WHERE ID = $id";
-    } else {
+    } */ else {
         $sql = "SELECT * FROM `64_clients`";
     }
 
