@@ -1,4 +1,4 @@
-<?php echo "Estat: " . session_status() . " ID: " . $_SESSION["id"] . " Client: " . $_SESSION["cliente_id"]; ?>
+<?php echo "Estat: " . session_status(); if (isset($_SESSION['cliente'])) { echo " ID: " . $_SESSION["cliente"]['tipo_usuario'] . " Client: " . $_SESSION["cliente"]['dni']; } ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -108,15 +108,15 @@
     <ul class="right">
         <li><a href="/student64/dwes/index.php" class="">Inici</a></li>
     
-        <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] == 1) { ?>
+        <?php if(isset($_SESSION['cliente'])) { if($_SESSION['cliente']['tipo_usuario'] == 1) { ?>
             <li><a href="/student64/dwes/indexAdmin.php" class="">Admin</a></li>
         <?php } } ?>
     
-        <?php if(isset($_SESSION['id'])) { if($_SESSION['id'] == 0) { ?>
+        <?php if(!isset($_SESSION['cliente'])) { ?>
             <li><a href="/student64/dwes/iniciSessio.php" class="">Iniciar sessio</a></li>
         <?php } else {?>
             <li><a class="dropdown-trigger" data-target="dropdown1">Compte<i class="material-icons right">arrow_drop_down</i></a></li>
-        <?php } }?>
+        <?php } ?>
     </ul>
   </div>
 </nav>

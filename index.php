@@ -1,4 +1,4 @@
-<?php session_start(); if(!isset($_SESSION['id'])) { $_SESSION['id'] = 0; } include("./templates/header.php"); ?>
+<?php session_start(); include("./templates/header.php"); ?>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>

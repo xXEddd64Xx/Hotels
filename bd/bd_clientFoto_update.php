@@ -10,7 +10,7 @@ if(isset($_POST['submit'])) {
         $blnExtensio = false;
         
         // Nom del fitxer.
-        $nom_fitxer = $_FILES['foto']['name'];
+        $nom_fitxer = $_SESSION['cliente']['dni'];
 
         // La mida en bytes del fitxer carregat.
         $tamany_fitxer = $_FILES['foto']['size'];
@@ -39,6 +39,7 @@ if(isset($_POST['submit'])) {
         foreach ($extensions as $extensio) {
             if((strpos($tipus_fitxer, $extensio))) {
                 $blnExtensio = true;
+                $nom_fitxer = $nom_fitxer.".".$extensio;
             }
         }
 
@@ -50,12 +51,11 @@ if(isset($_POST['submit'])) {
         if(empty($errorsF)) {
             // Si tot està ok 
             move_uploaded_file($fitxer_temp, '../images/perfils/' . $nom_fitxer);
-            /* $foto .= $nom_fitxer . ","; */
             include('../config/db_connexio.php');
-            $cliID = $_SESSION['cliente_id'];
+            $cliDNI = $_SESSION['cliente']['dni'];
             $sql = "UPDATE 64_clients
                     SET foto = '$nom_fitxer'
-                    WHERE cliente_id = $cliID";
+                    WHERE dni = '$cliDNI'";
 
             //LLançar la consulta
             mysqli_query($connexio, $sql);
