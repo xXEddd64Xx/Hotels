@@ -39,7 +39,7 @@
             <label for="pwd" class="black-text">Contraseña</label>
         </div>
         <div class="center">
-            <input type="submit" name="submit" value="Entrar" class="waves-effect waves-light btn z-depth-2">
+            <button type="submit" name="submit"  class="waves-effect waves-light btn z-depth-2">Entrar</button>
         </div>
     </form>
 </section>

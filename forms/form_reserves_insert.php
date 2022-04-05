@@ -9,7 +9,7 @@
     include('../bd/bd_Pensio_select.php');
     include('../bd/bd_Habitacio_select.php');
     include('../bd/bd_TipusHabitacio_select.php');
-    
+
     $errors = array('tipo' => '', 'numero' => '', 'numerotxt' => '', 'cerrada' => '', 'descripcion' => '', 'observaciones' => '', 'foto' => '');
     
     if(isset($_SESSION['errors'])) {
@@ -82,7 +82,7 @@
             </div>
             
             <div class="center">
-                <input type="submit" name="submit" value="Reservar" class="waves-effect waves-light btn">
+                <button type="submit" name="submit" class="waves-effect waves-light btn black-text">Reservar</button>
             </div>
     </form>
 </section>

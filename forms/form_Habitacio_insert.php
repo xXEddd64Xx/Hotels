@@ -73,7 +73,7 @@
                 <div class="red-text"><?php if(!empty($errors)) { echo htmlspecialchars($errors['foto']); } ?></div>
             </div> -->
             <div class="center">
-                <input type="submit" name="submit" value="enviar" class="waves-effect waves-light btn">
+                <button type="submit" name="submit" class="waves-effect waves-light btn black-text">Enviar</button>
             </div>
     </form>
 </section>

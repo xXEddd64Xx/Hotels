@@ -47,7 +47,7 @@
         </div>
         
         <div class="center">
-            <input type="submit" name="submit" value="crear" class="waves-effect waves-light btn">
+            <button type="submit" name="submit" class="waves-effect waves-light btn black-text">Crear</button>
         </div>
     </form>
 </section>

@@ -35,7 +35,7 @@
         <label for="foto" class="black-text"><h5>Foto:</h5></label>
         <input type="text" name="foto" value="<?php echo $th[0]["foto"]; ?>">
         <div class="center">
-            <input type="submit" name="submit" value="actualizar" class="waves-effect waves-light btn">
+            <button type="submit" name="submit" class="waves-effect waves-light btn black-text">Actualitzar</button>
         </div>
     </form>
 </section>

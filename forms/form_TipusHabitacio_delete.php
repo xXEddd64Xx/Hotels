@@ -12,7 +12,7 @@
         <label for="id">ID:</label>
         <input type="text" name="id">
         <div class="center">
-            <input type="submit" name="submit" value="Borrar" class="waves-effect waves-light btn"></a>
+            <button type="submit" name="submit" class="waves-effect waves-light btn black-text">Borrar</button>
         </div>
     </form>
 </section>

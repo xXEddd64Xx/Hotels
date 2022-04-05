@@ -12,10 +12,7 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
     <script src="https://kit.fontawesome.com/4047b7b55b.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
@@ -41,7 +38,6 @@
             min-height: 100vh;
             flex-direction: column;
         }
-
         main {
             flex: 1 0 auto;
         }
@@ -104,7 +100,7 @@
 </ul>
 <nav class="grey z-deph-0">
   <div class="nav-wrapper">
-    <a href="#!" class="brand-logo">DWES Hoteles</a>
+    <a href="/student64/dwes" class="brand-logo">DWES Hoteles</a>
     <ul class="right">
         <li><a href="/student64/dwes/index.php" class="">Inici</a></li>
     
@@ -115,7 +111,11 @@
         <?php if(!isset($_SESSION['cliente'])) { ?>
             <li><a href="/student64/dwes/iniciSessio.php" class="">Iniciar sessio</a></li>
         <?php } else {?>
-            <li><a class="dropdown-trigger" data-target="dropdown1">Compte<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-trigger" data-target="dropdown1">Compte<i class="fa-solid fa-caret-down fa-lg" style="margin-left: 10px;"></i></a></li>
+        <?php } ?>
+
+        <?php if(isset($_SESSION['cliente'])) {  ?>
+            <li><img src="/student64/dwes/images/perfils/<?php echo $_SESSION['cliente']['foto']; ?>" style="margin-top: 10px;" class="circle" height="40px" width="40px"></li>
         <?php } ?>
     </ul>
   </div>

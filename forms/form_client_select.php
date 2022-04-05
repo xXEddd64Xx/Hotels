@@ -42,7 +42,7 @@
                       <form action="../bd/bd_clientFoto_update.php" method="post" enctype="multipart/form-data">
                           <input class="btn" type="file" name="foto" >
                           </br>
-                          <input type="submit" name="submit" value="Canvia">
+                          <input hidden type="submit" name="submit" value="Canvia">
                       </form>
                       <!-- <button class="btn btn-primary">Editar foto</button> -->
                     </div>
