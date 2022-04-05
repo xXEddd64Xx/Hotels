@@ -8,7 +8,8 @@
     include('../templates/header.php');
     include('../bd/bd_Pensio_select.php');
     include('../bd/bd_Habitacio_select.php');
-    include('../bd/bd_tipusHabitacio_select.php');
+    include('../bd/bd_TipusHabitacio_select.php');
+    
     $errors = array('tipo' => '', 'numero' => '', 'numerotxt' => '', 'cerrada' => '', 'descripcion' => '', 'observaciones' => '', 'foto' => '');
     
     if(isset($_SESSION['errors'])) {
