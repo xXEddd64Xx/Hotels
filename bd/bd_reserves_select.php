@@ -37,6 +37,11 @@
             $sql = "SELECT * FROM `64_reserves_view` ORDER BY `Precio Reserva`";
             $param = "";
             break;
+        case 8:
+            $userDni = $_SESSION['cliente']['dni'];
+            $sql = "SELECT * FROM `64_reserves_view` WHERE DNI = '$userDni'";
+            $param = "";
+            break;
         default:
             $sql = "SELECT * FROM `64_reserves_view`";
             $param = "";

@@ -14,8 +14,34 @@
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="/student64/dwes/js/materialize.js"></script>
+    <link rel="stylesheet" href="/student64/dwes/css/materialize.css">
 </head>
-<body>
+<body style="background-repeat: no-repeat; background-size: cover;" class="teal accent-4 darken-0 lighten-0">
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="/student64/dwes/forms/form_client_select.php">Perfil</a></li>
+    <li class="divider"></li>
+    <li><a href="/student64/dwes/iniciSessio.php?submit=submit">Sortir</a></li>
+</ul>
+<nav class="grey z-deph-0">
+  <div class="nav-wrapper">
+    <a href="/student64/dwes" class="brand-logo">DWES Hoteles</a>
+    <ul class="right">
+        <li><a href="/student64/dwes/index.php" class="">Inici</a></li>
+    
+        <?php if(isset($_SESSION['cliente'])) { if($_SESSION['cliente']['tipo_usuario'] == 1) { ?>
+            <li><a href="/student64/dwes/indexAdmin.php" class="">Admin</a></li>
+        <?php } } ?>
+    
+        <li><a href="/student64/dwes/iniciSessio.php?submit=submit">Sortir</a></li>
+
+        <?php if(isset($_SESSION['cliente'])) {  ?>
+            <li><img src="/student64/dwes/images/perfils/<?php echo $_SESSION['cliente']['foto']; ?>" style="margin-right: 5px;" class="circle" height="40px" width="40px"></li>
+        <?php } ?>
+    </ul>
+  </div>
+</nav>
 <div class="container">
     <div class="main-body">
     
@@ -39,12 +65,6 @@
                       <h4><?php echo $c[($_SESSION['cliente_id'])-1]['nombre']." ".$c[($_SESSION['cliente_id'])-1]['apellido'] ?></h4>
                       <p class="text-secondary mb-1">Full Stack Developer</p>
                       <p class="text-muted font-size-sm"><?php echo $c[($_SESSION['cliente_id'])-1]['direccion'] ?></p>
-                      <form action="../bd/bd_clientFoto_update.php" method="post" enctype="multipart/form-data">
-                          <input class="btn" type="file" name="foto" >
-                          </br>
-                          <input hidden type="submit" name="submit" value="Canvia">
-                      </form>
-                      <!-- <button class="btn btn-primary">Editar foto</button> -->
                     </div>
                   </div>
                 </div>
@@ -124,74 +144,24 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
-                      <a class="btn btn-info " href="./form_client_update.php">Editar</a>
+                      <a class="btn btn-info" href="./form_client_update.php">Editar</a>
                     </div>
                   </div>
                 </div>
               </div>
-
               <div class="row gutters-sm">
                 <div class="col-sm-6 mb-3">
-                  <div class="card h-100">
-                    <div class="card-body">
-                      <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status</h6>
-                      <small>Web Design</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Website Markup</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>One Page</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Mobile Template</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Backend API</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <div class="card h-100">
-                    <div class="card-body">
-                      <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status</h6>
-                      <small>Web Design</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Website Markup</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>One Page</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Mobile Template</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Backend API</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
+                  <ul class="collection with-header">
+                    <li class="collection-header"><h4>Opcions</h4></li>
+                    <li class="collection-item"><div>Les meves reserves<a href="./form_reserves_select.php?param=8&submit=submit" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+                    <li class="collection-item"><div>Reservar una habitació<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+                    <li class="collection-item"><div>Visualitzar habitacions<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+                    <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+                  </ul>
                 </div>
               </div>
-
-
-
             </div>
           </div>
-
         </div>
     </div>
 

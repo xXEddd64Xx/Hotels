@@ -1,7 +1,7 @@
 <?php
     session_start();
     include('../templates/header.php');
-    include("../bd/bd_reserves_select.php");
+    include('../bd/bd_reserves_select.php');
 ?>
 
     <section class="container black-text">

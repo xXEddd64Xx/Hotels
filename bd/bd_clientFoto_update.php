@@ -6,7 +6,7 @@ if(isset($_POST['submit'])) {
         $errors = array();
 
         // Control de extensions.
-        $extensions = array("jpeg", "jpg", "png");
+        $extensions = array("jpeg", "jpg", "png", "gif");
         $blnExtensio = false;
         
         // Nom del fitxer.
