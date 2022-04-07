@@ -19,7 +19,7 @@
         <div class="footer-copyright grey z-deph-0 accent-0 darken-2 lighten-0">
             <div class="container">
                 © 2021 Copyright DWES Hoteles
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                <a class="grey-text text-lighten-4 right" href="/student64/dwes/extras/aviso_legal.php">Aviso Legal</a>
             </div>
         </div>
     </footer>

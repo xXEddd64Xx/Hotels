@@ -1,8 +1,7 @@
 <?php
-  session_start(); 
+  session_start();
   include("../bd/bd_client_select.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>

@@ -2,7 +2,7 @@
   session_start();
   include("../bd/bd_client_select.php");
 ?>
-
+<?php echo "Estat: " . session_status(); if (isset($_SESSION['cliente'])) { echo " ID: " . $_SESSION["cliente"]['tipo_usuario'] . " Client: " . $_SESSION["cliente"]['dni']; } ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

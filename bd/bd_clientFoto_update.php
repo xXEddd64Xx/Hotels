@@ -49,6 +49,12 @@ if(isset($_POST['submit'])) {
 
         // Comprovar els possibles errors.
         if(empty($errorsF)) {
+            $ultimaFoto = $_SESSION['cliente']['foto'];
+            If(unlink('/student64/dwes/images/perfils/'.$ultimaFoto)) {
+                // S'ha esborrat la foto
+            } else {
+                // No s'ha esborrat la foto
+            }
             // Si tot està ok 
             move_uploaded_file($fitxer_temp, '../images/perfils/' . $nom_fitxer);
             include('../config/db_connexio.php');
