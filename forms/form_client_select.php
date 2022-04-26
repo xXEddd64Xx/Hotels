@@ -28,13 +28,13 @@
   <div class="nav-wrapper">
     <a href="/student64/dwes" class="brand-logo">DWES Hoteles</a>
     <ul class="right">
-        <li><a href="/student64/dwes/index.php" class="">Inici</a></li>
+        <li><a href="/student64/dwes/index.php" class="white-text">Inici</a></li>
     
         <?php if(isset($_SESSION['cliente'])) { if($_SESSION['cliente']['tipo_usuario'] == 1) { ?>
-            <li><a href="/student64/dwes/indexAdmin.php" class="">Admin</a></li>
+            <li><a href="/student64/dwes/indexAdmin.php" class="white-text">Admin</a></li>
         <?php } } ?>
     
-        <li><a href="/student64/dwes/iniciSessio.php?submit=submit">Sortir</a></li>
+        <li><a href="/student64/dwes/iniciSessio.php?submit=submit" class="white-text">Sortir</a></li>
 
         <?php if(isset($_SESSION['cliente'])) {  ?>
             <li><img src="/student64/dwes/images/perfils/<?php echo $_SESSION['cliente']['foto']; ?>" style="margin-right: 5px;" class="circle" height="40px" width="40px"></li>
