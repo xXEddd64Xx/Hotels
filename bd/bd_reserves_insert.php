@@ -12,10 +12,11 @@
         $cantidad_personas = $_POST['cantidad_personas'];
         $noches = (array)date_diff(date_create($datein), date_create($dateout));
         $precio = $th[$tipo]['precio']*$noches['days'];
-        $habitaciones_disponibles = mysqli_query($connexio, "SELECT count(*) FROM 64_habitacio WHERE tipo_habitacion = $tipo");
-        $habitaciones_reservadas = mysqli_query($connexio, "SELECT count(*) FROM `64_reserves_view` WHERE 'ID Tipus Habitacio' = $tipo");
+        $habitaciones_disponibles = (int)mysqli_query($connexio, "SELECT count(*) FROM 64_habitacio WHERE tipo_habitacion = $tipo");
+        $habitaciones_reservadas = (int)mysqli_query($connexio, "SELECT count(*) FROM `64_reserves_view` WHERE 'ID Tipus Habitacio' = $tipo AND ('Entrada' <= $datein OR 'Salida' >= $dateout)");
         if(($habitaciones_disponibles - $habitaciones_reservadas) <= 0) {
-            header("Location: ../forms/form_reserves_insert.php");
+            echo "No ha funcionat";
+            //header("Location: ../forms/form_reserves_insert.php");
         }
 
     }

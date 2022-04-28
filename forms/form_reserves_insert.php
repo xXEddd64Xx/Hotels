@@ -28,7 +28,7 @@
     <form action="../bd/bd_reserves_insert.php" method="post" class="white z-depth-5" style="border-radius: 30px; opacity:90%;">
 
             <div hidden class="input-field col s6">
-                <input id="idcliente" type="text" name="idcliente" value="1">
+                <input id="idcliente" type="text" name="idcliente" value="<?php echo $_SESSION["cliente"]['cliente_id'] ?>">
                 <!-- <label for="idcliente" class="black-text">ID Cliente</label> -->
                 <!-- <div class="red-text"><?php if(!empty($errors)) { echo htmlspecialchars($errors['numero']); } ?></div> -->
             </div>
